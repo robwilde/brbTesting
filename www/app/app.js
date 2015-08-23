@@ -1,7 +1,7 @@
 /**
  * Created by robert on 22/08/2015.
  */
-angular.module("brbApp", ["ionic"])
+angular.module("brbApp", ["ngCordova", "ionic"])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -23,10 +23,11 @@ angular.module("brbApp", ["ionic"])
 
         $stateProvider
             .state('home', {
-                //abstract: true,
+                abstract: false,
                 url: "/home",
                 templateUrl: "app/home/home.html"
             })
+
             .state('home.search', {
                 url: "/search",
                 views: {
@@ -43,6 +44,7 @@ angular.module("brbApp", ["ionic"])
                     }
                 }
             })
+
             .state('app', {
                 abstract: true,
                 url: "/app",
@@ -52,8 +54,8 @@ angular.module("brbApp", ["ionic"])
             .state('app.allStock', {
                 url: "/allStock",
                 views: {
-                    'mainContent':{
-                        templateUrl:"app/stock/allStock.html"
+                    'mainContent': {
+                        templateUrl: "app/stock/allStock.html"
                     }
                 }
             })
@@ -61,8 +63,8 @@ angular.module("brbApp", ["ionic"])
             .state('app.stockDetail', {
                 url: "/details/:productId",
                 views: {
-                    'mainContent':{
-                        templateUrl:"app/stock/stockDetails.html"
+                    'mainContent': {
+                        templateUrl: "app/stock/stockDetails.html"
                     }
                 }
             })
@@ -70,8 +72,8 @@ angular.module("brbApp", ["ionic"])
             .state('app.myStock', {
                 url: "/myStock/:vehicleId",
                 views: {
-                    'mainContent':{
-                        templateUrl:"app/staff/myStock.html"
+                    'mainContent': {
+                        templateUrl: "app/staff/myStock.html"
                     }
                 }
             })
@@ -79,8 +81,8 @@ angular.module("brbApp", ["ionic"])
             .state('app.myInstalls', {
                 url: "/myInstalls/:vehicleId",
                 views: {
-                    'mainContent':{
-                        templateUrl:"app/staff/myInstalls.html"
+                    'mainContent': {
+                        templateUrl: "app/staff/myInstalls.html"
                     }
                 }
             })
@@ -88,15 +90,25 @@ angular.module("brbApp", ["ionic"])
             .state('app.help', {
                 url: "/help",
                 views: {
-                    'mainContent':{
-                        templateUrl:"app/help.html"
+                    'mainContent': {
+                        templateUrl: "app/help.html"
                     }
                 }
             })
 
+            .state('app.deviceInfo', {
+                url: "/deviceInfo",
+                views: {
+                    'mainContent': {
+                        templateUrl: "app/device/deviceInfo.html"
+                    }
+                }
+            });
 
-        //
-        // if nothing matched, use this as fallback
-        //
+
+//
+// if nothing matched, use this as fallback
+//
         $urlRouterProvider.otherwise('/home');
-    });
+    })
+;

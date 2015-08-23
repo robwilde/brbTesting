@@ -2,3 +2,8 @@
 .tabs-striped.tabs-dark .tab-item.tab-item-active, .tabs-striped.tabs-dark .tab-item.active, .tabs-striped.tabs-dark .tab-item.activated{
 border-color: transparent;
 }
+
+.app-background{
+    /*background-color: #005EAA;*/
+    background: #005EAA url("img/brb-app-logo.png") no-repeat center ;
+}

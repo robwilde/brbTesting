@@ -15,7 +15,11 @@
     <!-- ionic/angularjs js -->
     <script src = "lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
     <!-- cordova script (this will be a 404 during development) -->
+    <script src = "lib/ng-cordova.min.js"></script>
     <script src = "cordova.js"></script>
     <script src = "lib/lodash/lodash.min.js"></script>
 
@@ -29,9 +33,11 @@
     <!--angular controllers-->
     <script src = "app/stock/stockCtrl.js"></script>
     <script src = "app/stock/stockDetailsCtrl.js"></script>
+    <script src = "app/device/deviceInfoCtrl.js"></script>
+    <script src = "app/home/scannerCtrl.js"></script>
 </head>
 
-<body ng-app = "brbApp">
+<body class="app-background" ng-app = "brbApp">
 <ion-nav-view></ion-nav-view>
 </body>
 </html>
