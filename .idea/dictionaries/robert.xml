@@ -2,6 +2,9 @@
   <dictionary name="robert">
     <words>
       <w>cordova</w>
+      <w>dragend</w>
+      <w>geolocation</w>
+      <w>gmapgoogle</w>
       <w>lodash</w>
       <w>pricetags</w>
     </words>

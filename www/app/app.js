@@ -1,7 +1,7 @@
 /**
  * Created by robert on 22/08/2015.
  */
-angular.module("brbApp", ["ngCordova", "ionic"])
+angular.module("brbApp", ["ngCordova", "ionic", "uiGmapgoogle-maps"])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -101,6 +101,14 @@ angular.module("brbApp", ["ngCordova", "ionic"])
                 views: {
                     'mainContent': {
                         templateUrl: "app/device/deviceInfo.html"
+                    }
+                }
+            })
+            .state('app.location-map', {
+                url: "/location-map/:id",
+                views: {
+                    'mainContent': {
+                        templateUrl: "app/location/location-map.html"
                     }
                 }
             });
