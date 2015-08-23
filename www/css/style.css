@@ -1,0 +1,4 @@
+/* Empty. Add your own CSS if you like */
+.tabs-striped.tabs-dark .tab-item.tab-item-active, .tabs-striped.tabs-dark .tab-item.active, .tabs-striped.tabs-dark .tab-item.activated{
+border-color: transparent;
+}

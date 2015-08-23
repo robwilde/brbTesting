@@ -1,0 +1,58 @@
+<ion-view ng-controller="stockDetailsCtrl as vm">
+    <ion-content class="has-header">
+        <h2>Battery Details</h2>
+        <div class="list list-inset">
+            <div class="item item-divider">{{ vm.product.productNumber }}</div>
+
+            <div class = "item">
+                <div class = "row"><h2>Specs</h2></div>
+                <div class="row">
+                    <div class = "col"><h4>AH(20HR)</h4></div>
+                    <div class = "col"><h4>RC(min)</></div>
+                    <div class = "col"><h4>CCA(@ -18&#176;c)</h4></div>
+                </div>
+                <div class = "row">
+                    <div class = "col col-center">{{vm.product.ah}}</div>
+                    <div class = "col">{{vm.product.rc}}</div>
+                    <div class = "col">{{vm.product.cca}}</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row"><h2>Dimensions</h2></div>
+                <div class="row">
+                    <div class = "col"><h4>Length</h4></div>
+                    <div class = "col"><h4>Width</h4></div>
+                    <div class = "col"><h4>Height</h4></div>
+                </div>
+                <div class="row">
+                    <div class = "col">{{vm.product.dimensions.length}} mm</div>
+                    <div class = "col">{{vm.product.dimensions.width}} mm</div>
+                    <div class = "col">{{vm.product.dimensions.height}} mm</div>
+                </div>
+            </div>
+
+            <div class="item assertive"><b>{{ vm.product.price | currency }}</b></div>
+
+            <div class="item item-divider">
+                <div class="row"><h2>Current Stock</h2></div>
+            </div>
+
+            <div class="item">
+                <div class = "row">
+                    <div class = "col padding-horizontal"><h4>On Order</h4></div>
+                    <div class = "col padding-horizontal"><h4>Ordered</h4></div>
+                    <div class = "col padding-horizontal"><h4>Vehicle</h4></div>
+                    <div class = "col padding-horizontal"><h4>Prime</h4></div>
+                </div>
+
+                <div class = "row">
+                    <div class = "col button button-block button-calm">{{vm.product.orders}}</div>
+                    <div class = "col button button-block button-assertive">{{vm.product.ordered}}</div>
+                    <div class = "col button button-block button-balanced">{{vm.product.vehicleStock}}</div>
+                    <div class = "col button button-block button-positive">{{vm.product.primeStock}}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
